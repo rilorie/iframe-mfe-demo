@@ -28,35 +28,10 @@ module.exports = {
           // Add other loaders for CSS, images, etc., as needed
         ],
       },
-  // optimization: {
-  //   minimize: false,
-  //   runtimeChunk: false,
-  //   innerGraph: false,
-  // },
-  // output: {
-  //   publicPath: "auto",
-  //   uniqueName: "host"
-
-  // },
   plugins: [
-    new ModuleFederationPlugin({
-        name: "host",
-        remotes: {
-            content: "content@http://localhost:8080/remoteEntry.js", // The remote name and URL
-        },
-        shared: {
-            "react": { singleton: true, requiredVersion: deps.react},
-            "react-dom": { singleton: true, requiredVersion: deps["react-dom"]},
-            // ... other shared dependencies (must match the remote's shared config)
-        },
-    }),
     new HtmlWebpackPlugin({
         template: "./dist/index.html",
     }),
 ],
-            // externals: {
-            //     react: 'React', // Assumes React is available globally as 'React'
-            //     'react-dom': 'ReactDOM' // If using ReactDOM as well
-            // }
 };
 
