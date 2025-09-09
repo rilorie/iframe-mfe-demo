@@ -1,6 +1,6 @@
 This is a test repository that shows how to render a microfrontend (MFE) using iframes. 
 
-You need to ensure that iframe-content has been started in order for this to work (`localhost:9000`)
+You need to ensure that [iframe-content](https://github.com/rilorie/iframe-content) is running in order for this to work (validate at `localhost:9000`)
 
 Now, navigate back to this project and start the server:
 
